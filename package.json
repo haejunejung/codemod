@@ -1,0 +1,45 @@
+{
+  "name": "codemod",
+  "version": "0.0.0",
+  "description": "Codemod",
+  "type": "module",
+  "keywords": ["codemod"],
+  "author": "haejunejung",
+  "license": "MIT",
+  "bin": {
+    "codemod": "dist/cli.js"
+  },
+  "files": ["dist/**/*", "README.md"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "dist/cli.js",
+    "test": "vitest",
+    "format": "biome format --write",
+    "lint": "biome lint --write",
+    "check": "biome check --write",
+    "prepublish": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haejunejung/codemode.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@10.10.0",
+  "devDependencies": {
+    "@apollo/client": "^3.13.8",
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.6",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@inkjs/ui": "^2.0.0",
+    "ink": "^6.0.0",
+    "meow": "^13.2.0",
+    "react": "^19.1.0",
+    "ts-morph": "^26.0.0",
+    "vitest": "^3.1.4"
+  }
+}
